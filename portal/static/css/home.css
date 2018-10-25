@@ -1,0 +1,91 @@
+{% load static %}
+
+.nav {
+    margin: 20px;
+}
+
+.nav-item {color: black;}
+
+.nav-item.nav-link.active {
+    background-color: #f9f9f9;
+    color: black;
+    text-decoration: underline;
+}
+
+#nav-login-tab {
+    border-radius: 20px;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+#homepic {
+    width: 50vw;
+}
+
+#homepage {
+    position: fixed;
+    right: 0vw;
+    top: 0vh;
+    z-index: -1;
+}
+
+#hometext {
+    margin: 40px;
+    margin-left: 80px;
+    width: 40vw;
+    
+}
+
+#hometext > h3 {
+    color: gray;
+    margin-top: 20px;
+}
+#hometext > form {margin-top: 40px;}
+
+#nav-profile {
+    margin: 40px;
+    margin-left: 80px;
+    width: 40vw;
+}
+
+#interest {
+    border-radius: 20px;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+    border: none;
+}
+
+.container {width: 100vw;}
+
+.aboutustext{
+}
+
+#aboutus {
+    position: fixed;
+    left: 0px;
+    bottom: -10vh;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+#aboutuspic {
+    width: 100vw;
+}
+
+.collapse {
+    color: black;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #f9f9f9;
+    color: black;
+}
+
+.navbar-toggler {
+    background-color: gray;
+    border-color: rgba(255,255,255,1);
+}
