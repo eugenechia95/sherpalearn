@@ -19,8 +19,13 @@
     
   </head>
   <body>
-    <nav class="navbar navbar-expand-md">
-      <div class="nav navbar navbar-expand-md nav-pills" id="nav-tab" role="tablist">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand"><img id ="homeimg" src="{% static 'images/Squarelogo.png' %}"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-tab" aria-controls="nav-tab" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        
+      <div class="nav nav-pills collapse navbar-collapse" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
         <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">About Us</a>
         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
@@ -72,13 +77,13 @@
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
         <div class="container">
             <div class="row aboutustext">
-                <div class="col-6">
+                <div class="col-lg-6">
                     <h1>What is Sherpa?</h1>
                     <p>We are building a one-stop, global database or learning resources and teaching materials for the students and educators of the internet age, making it simple and affordable for parents and education providers to teach structured, quality content to the next generation.</p>
                     <p>By empowering individuals around the world with easy access to quality learning and teaching materials, we want to massively reduce the opportunity cost and barriers of entry to teaching higher level education. This will make it easy for individuals to take the first steps in their education journey, no matter where they are in the world.</p>
                 </div>
              
-                <div class="col-6">
+                <div class="col-lg-6">
                     <div>
                         <h1>Our Mission</h1>
                         <p>To provide affordable, accessible and high quality education materials for all learners and educators in the world.</p>
