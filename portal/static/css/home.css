@@ -1,34 +1,35 @@
 {% load static %}
 
-#homeimg {
-    width: 10vw;
-    margin-left: 50px;
+#aboutus {
+    position: fixed;
+    left: 0px;
+    bottom: -10vh;
+    z-index: -1;
+    opacity: 0.1;
 }
 
-.nav {
-    margin: 20px;
-    margin-left: 10px;
-}
-
-
-.nav-item {
-    color: black;
-    margin-right: 10px;
-}
-
-.nav-item.nav-link.active {
-    background-color: #f9f9f9;
-    color: black;
-    text-decoration: underline;
-}
-
-#nav-login-tab {
-    border-radius: 20px;
+#aboutuspic {
+    width: 100vw;
 }
 
 body {
     background-color: #f9f9f9;
+    font-family: Mukta;
 }
+
+#closebut {
+    border: 2px solid white;
+}
+
+.collapse {
+    color: black;
+}
+
+#hometext > h1{
+    font-weight: 1000;
+}
+
+.container {width: 100vw;}
 
 #homepic {
     width: 50vw;
@@ -52,12 +53,12 @@ body {
     color: gray;
     margin-top: 20px;
 }
+
 #hometext > form {margin-top: 40px;}
 
-#nav-profile {
-    margin: 40px;
-    margin-left: 80px;
-    width: 40vw;
+#homeimg {
+    width: 10vw;
+    margin-left: 50px;
 }
 
 #interest {
@@ -69,22 +70,21 @@ body {
     border: none;
 }
 
-.container {width: 100vw;}
-
-#aboutus {
-    position: fixed;
-    left: 0px;
-    bottom: -10vh;
-    z-index: -1;
-    opacity: 0.2;
+#loginbut {
+    margin: 10px;
+    background-color: rgba(	255, 170, 7, 1);
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white
 }
 
-#aboutuspic {
-    width: 100vw;
+.modal-body {
+    text-align: center;
 }
 
-.collapse {
-    color: black;
+.modal-content {
+    padding: 20px;
+    background-color: rgba(	255, 225, 0, 0.9);
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
@@ -92,9 +92,36 @@ body {
     color: black;
 }
 
+.nav {
+    margin: 20px;
+    margin-left: 10px;
+}
+
+
+.nav-item {
+    color: black;
+    margin-right: 10px;
+}
+
+.nav-item.nav-link.active {
+    background-color: #f9f9f9;
+    color: black;
+    text-decoration: underline;
+}
+
+#nav-login-tab {
+    border-radius: 20px;
+}
+
 .navbar-toggler {
     background-color: gray;
     border-color: rgba(255,255,255,1);
+}
+
+#nav-profile {
+    margin: 40px;
+    margin-left: 80px;
+    width: 40vw;
 }
 
 @media (max-width: 992px) { 
@@ -123,3 +150,4 @@ body {
     }
     
 }
+

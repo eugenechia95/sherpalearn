@@ -1,0 +1,42 @@
+body {
+    background-color: #f9f9f9;
+    font-family: Mukta;
+    margin: 20px;
+}
+
+#homeimg {
+    width: 20vw;
+    display: block;
+    margin: auto;
+    margin-top: 10vh;
+
+}
+
+#signupbut {
+    padding: 10px;
+    background-color: rgba(	255, 170, 7, 1);
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white
+    
+}
+
+.col-lg-4{
+
+    text-align: center;
+}
+
+.col-lg-8 {
+    margin-top: 20px;
+}
+
+#signupform {
+    
+}
+
+@media (max-width: 992px) {
+    #homeimg {
+    margin-top: 5vh;
+
+}
+}

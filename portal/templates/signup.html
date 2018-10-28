@@ -1,0 +1,27 @@
+{% extends 'base_generic.html' %}
+
+{% load static %}
+{% block css %}
+      <link rel="stylesheet" href="{% static 'css/signup.css' %}"> 
+{% endblock %} 
+
+{% block content %}
+
+<div id ="signupform" class="container-fluid">
+    <div class="row">
+
+        <div class ="col-lg-4">
+            <img id ="homeimg" src="{% static 'images/Squarelogo.png' %}">
+            <h2>Join Sherpa Today!</h2>
+        </div>    
+      <div class ="col-lg-8">
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" id ="signupbut">Sign up</button>
+          </form>
+      </div>
+    </div>
+</div>
+{% endblock %}
+    

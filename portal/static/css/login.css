@@ -1,0 +1,23 @@
+body {
+    background-color: #f9f9f9;
+    font-family: Mukta;
+}
+
+#homeimg {
+    height: 50vh;
+    margin-left: 8vw;
+    margin-bottom: 20px;
+}
+
+#loginbut {
+    margin: 10px;
+    background-color: rgba(	255, 170, 7, 1);
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white
+}
+
+#loginform {
+    text-align: center;
+    margin: 20px;
+}
