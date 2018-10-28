@@ -1,1 +1,1 @@
-web: gunicorn sherpalearn.wsgi --log-file -
+web: gunicorn sherpa.wsgi --log-file -
