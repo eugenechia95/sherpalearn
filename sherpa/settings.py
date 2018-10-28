@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'uihmzsoh#9y%n&e$=hqy#ozr5zc8^y
 #DEBUG = True
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sherpaapp.herokuapp.com/', '127.0.0.1:8000' ,'127.0.0.1']
 
 
 # Application definition
