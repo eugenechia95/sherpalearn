@@ -35,10 +35,16 @@ def signup(request):
 
 @login_required
 def checkauth(request):
-    if request.user.is_staff:
-        #your logic here
-        return redirect("allprojects/")# or your url name
     if request.user.is_authenticated:
         #your logic here
         return redirect("users/")# or your url name
+    
+
+@login_required
+def users(request):
+        
+    # Render the HTML template users.html with the data in the context variable
+    return render(
+        request,
+        'users.html',)
     

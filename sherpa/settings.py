@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'uihmzsoh#9y%n&e$=hqy#ozr5zc8^y
 #DEBUG = True
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = ['sherpaapp.herokuapp.com', '127.0.0.1:8000' ,'127.0.0.1']
+ALLOWED_HOSTS = ['sherpaapp.herokuapp.com', '127.0.0.1:8000' ,'127.0.0.1', 'learnwithsherpa.com']
 
 
 # Application definition
@@ -127,7 +127,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/portal'
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
