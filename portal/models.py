@@ -65,12 +65,15 @@ class Question(models.Model):
 
 class Worksheet(models.Model):
     worksheet_id = models.AutoField(primary_key=True)
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
-    questions = models.ManyToManyField(Question)
-    profile_assigned = models.ManyToManyField(Profile)
+    title = models.CharField(max_length=75, null=True, blank=True)
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, null=True, blank=True)
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE, null=True, blank=True)
+    questions = models.ManyToManyField(Question, blank=True)
+    profile_assigned = models.ManyToManyField(Profile, blank=True)
+    icon = models.ImageField(upload_to= "uploads/worksheetref", max_length=100, null=True, blank=True)
 
     date_assigned = models.DateField(auto_now_add=True)
-    due_date = models.DateTimeField()
+    due_date = models.DateTimeField(null=True, blank=True)
 
     STATUS = [
         ('A', 'Assigned'),
@@ -84,7 +87,7 @@ class Worksheet(models.Model):
     )
 
     def __str__(self):
-        return "Worksheet", self.worksheet_id
+        return self.title
 
 class Note(models.Model):
     
