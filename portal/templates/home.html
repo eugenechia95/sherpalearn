@@ -93,7 +93,8 @@
     
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-        <div id ="hometext">
+          <div id ="homepage"><img id="homepic" src="{% static 'images/homepage.jpg' %}"></div>
+          <div id ="hometext">
             <h1>Sherpa</h1>
             <h3>Learning made easy</h3>
             <p>We're bringing quality teaching and learning resources together, all in one place</p>
@@ -101,24 +102,24 @@
                 <input type="text" placeholder=" Email Address">
                 <input type="submit" id = "interest" class="btn-warning" value="I'm Interested">
             </form>
+            <br><br>
         </div>
-        <div id ="homepage"><img id="homepic" src="{% static 'images/homepage.jpg' %}"></div>
+        <div id="hometext2">
+            <h1>What is Sherpa?</h1>
+            <p>We are building a one-stop, global database or learning resources and teaching materials for the students and educators of the internet age, making it simple and affordable for parents and education providers to teach structured, quality content to the next generation.</p>
+            <p>By empowering individuals around the world with easy access to quality learning and teaching materials, we want to massively reduce the opportunity cost and barriers of entry to teaching higher level education. This will make it easy for individuals to take the first steps in their education journey, no matter where they are in the world.</p>
+        </div>
+        
       </div>
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
         <div class="container">
             <div class="row aboutustext">
-                <div class="col-lg-6">
-                    <h1>What is Sherpa?</h1>
-                    <p>We are building a one-stop, global database or learning resources and teaching materials for the students and educators of the internet age, making it simple and affordable for parents and education providers to teach structured, quality content to the next generation.</p>
-                    <p>By empowering individuals around the world with easy access to quality learning and teaching materials, we want to massively reduce the opportunity cost and barriers of entry to teaching higher level education. This will make it easy for individuals to take the first steps in their education journey, no matter where they are in the world.</p>
-                </div>
-             
-                <div class="col-lg-6">
-                    <div>
+                <div class="">
+                    <div class="misvis">
                         <h1>Our Mission</h1>
                         <p>To provide affordable, accessible and high quality education materials for all learners and educators in the world.</p>
                     </div>
-                    <div>
+                    <div class ="misvis">
                         <h1>Our Vision</h1>
                         <p>Globally empowering educators and self- educators with equal access to high quality tools and teaching materials to unlock quality education for all.</p>
                     </div>
