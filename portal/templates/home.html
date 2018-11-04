@@ -46,7 +46,7 @@
                       <button type="button" class="close" data-dismiss="modal">&times;</button>
                   </div>
                   <div class="modal-body">
-                    {% if form.errors %}
+                    <!--{% if form.errors %}
                     <p>Your username and password didn't match. Please try again.</p>
                     {% endif %}
 
@@ -75,6 +75,15 @@
                     <input class="btn-light btn" id ="loginbut" type="submit" value="Login" />
                     <input type="hidden" name="next" value="{{ next }}" />
                     </div>
+                    </form>-->
+                      
+                    <form method="post" action="{% url 'login' %}">
+                        {% csrf_token %}
+                        <p><label for="id_username">Username:</label> <input id="id_username" type="text" name="username" maxlength="30" /></p>
+                        <p><label for="id_password">Password:</label> <input type="password" name="password" id="id_password" /></p>
+
+                        <input class="btn-light btn" id ="loginbut" type="submit" value="Login" />
+                        <input type="hidden" name="next" value="" />
                     </form>
 
                     {# Assumes you setup the password_reset view in your URLconf #}
@@ -98,10 +107,13 @@
             <h1>Sherpa</h1>
             <h3>Learning made easy</h3>
             <p>We're bringing quality teaching and learning resources together, all in one place</p>
-            <form>
-                <input type="text" placeholder=" Email Address">
+              
+            <form action="" method="POST">
+            {% csrf_token %}
+                <input type="email" placeholder=" Email Address" name="email1">
                 <input type="submit" id = "interest" class="btn-warning" value="I'm Interested">
             </form>
+              
             <br><br>
         </div>
         

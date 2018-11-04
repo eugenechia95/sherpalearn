@@ -34,3 +34,7 @@ class WorksheetAdmin(admin.ModelAdmin):
 @admin.register(Note)
 class NoteAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(Subscribe)
+class SubscribeAdmin(admin.ModelAdmin):
+    pass

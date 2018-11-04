@@ -9,10 +9,12 @@ from django.contrib.auth import views as auth_views
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 
-class LoginView(auth_views.LoginView):
-    template_name = "home.html"
-
 def home(request):
+    if request.method == 'POST':
+            if request.POST.get('email1'):
+                email1 = request.POST.get('email1')
+                Subscribe.objects.create(email=email1)
+
     return render(request, 'home.html')
 
 def signup(request):
