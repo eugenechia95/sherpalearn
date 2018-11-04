@@ -76,6 +76,7 @@ class Worksheet(models.Model):
     due_date = models.DateTimeField(null=True, blank=True)
 
     STATUS = [
+        ('U', 'Unassigned'),
         ('A', 'Assigned'),
         ('O', 'Overdue'),
         ('C', 'Completed')
@@ -83,7 +84,7 @@ class Worksheet(models.Model):
     status = models.CharField(
         max_length=1,
         choices=STATUS,
-        default='A',
+        default='U',
     )
 
     def __str__(self):

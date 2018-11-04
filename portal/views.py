@@ -42,9 +42,14 @@ def checkauth(request):
 
 @login_required
 def users(request):
-        
+    worksheets=Worksheet.objects.all()
+    newworksheets = Worksheet.objects.filter(status='U')
+    subjects=Subject.objects.all()
+    topics=Topic.objects.all()
+    assignedws = Worksheet.objects.filter(status='A')
+    
     # Render the HTML template users.html with the data in the context variable
     return render(
         request,
-        'users.html',)
+        'users.html',context={"worksheets":worksheets, "newws":newworksheets,"subjects":subjects, "topics":topics, "assignedws":assignedws})
     

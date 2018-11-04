@@ -18,7 +18,7 @@ p {
     font-size: 1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: black;
 }
 
 a,
@@ -208,7 +208,49 @@ a.article:hover {
     CARD STYLE
 ----------------------------------------------------- */
 
-.card {margin: 0px 5px;}
+.card {
+    margin: 10px 5px;
+    width: 120px;
+    height: 160px;
+    border: none;
+}
+
+.card-img-top {
+    width: auto;
+    height: 80px;
+    position: absolute;
+    top: -99px;
+    bottom: -99px;
+    left: -99px;
+    right: -99px;
+    margin: auto;
+}
+
+.imgbord {
+    width:120px;
+    height: 120px;
+    border: solid #999 1px;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: auto;
+    padding-right: auto;
+    position: relative;
+}
+
+.card-text {
+    width: 90%;
+    margin: auto;
+}
+
+.card-body {
+    padding: 0px;
+}
+
+.cardassign {
+    font-size: 0.8em;
+    margin:0px 5px;
+}
 
 @media (max-width: 992px) {
     #homeimg {
