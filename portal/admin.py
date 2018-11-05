@@ -38,3 +38,7 @@ class NoteAdmin(admin.ModelAdmin):
 @admin.register(Subscribe)
 class SubscribeAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(Enquiry)
+class EnquiryAdmin(admin.ModelAdmin):
+    pass

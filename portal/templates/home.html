@@ -96,98 +96,162 @@
 
               </div>
             </div>
-        <a class="nav-item nav-link" id="nav-signup-tab" href="signup/" >Sign Up</a>
+        <!--<a class="nav-item nav-link" id="nav-signup-tab" href="signup/" >Sign Up</a>-->
         </div>
     </nav>  
     
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
           <div id ="homepage"><img id="homepic" src="{% static 'images/homepage.jpg' %}"></div>
-          <div id ="hometext">
-            <h1>Sherpa</h1>
-            <h3>Learning made easy</h3>
-            <p>We're bringing quality teaching and learning resources together, all in one place</p>
-              
-            <form action="" method="POST">
-            {% csrf_token %}
-                <input type="email" placeholder=" Email Address" name="email1">
-                <input type="submit" id = "interest" class="btn-warning" value="I'm Interested">
-            </form>
-              
-            <br><br>
-        </div>
-        
-        <div class="container" id="hometext2">
-          <div class="row">
-            <div class="youtube col-lg-6">
-                <h1>What is Sherpa?</h1>
-                <p>We are building a one-stop, global database or learning resources and teaching materials for the students and educators of the internet age, making it simple and affordable for parents and education providers to teach structured, quality content to the next generation.</p>
-                <p>By empowering individuals around the world with easy access to quality learning and teaching materials, we want to massively reduce the opportunity cost and barriers of entry to teaching higher level education. This will make it easy for individuals to take the first steps in their education journey, no matter where they are in the world.</p>
+          <div class="container" id="hometext2">
+              <div class="row">
+                    <div class="youtube col-lg-6">
+                        <h1>Sherpa</h1>
+                        <h4>Learning made easy</h4>
+                        <p><i>We're bringing quality teaching and learning resources together, all in one place. </i></p>
+                        <p>Sherpa is a <b>one-stop learning platform</b> with a <b>global database of educational resources</b> for the student and educators of the internet age. The progress of individual learners is also tracked through, and <b>customised worksheets and tests</b> are generated for them. </p>
+                        <p>Through making education <b>simple</b> and <b>affordable</b>, we hope to <b>empower individuals</b> to take the first steps in their education journey, no matter where they are in the world.</p>
+                    </div>
+                    <div id = "yvid" class="col-lg-4">
+                        <iframe width="420" height="315" class ="youtube" id ="youtubevid"
+                    src="https://www.youtube.com/embed/7Qcg-lth_lE">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="row featbar">
+                    <div class="col-lg-3 feat">
+                        <img src="{% static 'images/pic1.png' %}">
+                        <h4>Comprehensive</h4>
+                        <p>Sherpa’s database covers the entire range of secondary and pre-university level topics in mathematics and the sciences </p>
+                    </div>
+                    <div class="col-lg-3 feat">
+                        <img src="{% static 'images/pic2.png' %}">
+                        <h4>Seamless</h4>
+                        <p>Our platform is easily navigable with the resources sorted according to each user’s learning profile e.g. high school student from Indonesia</p>
+                    </div>
+                    <div class="col-lg-3 feat">
+                        <img src="{% static 'images/pic3.png' %}">
+                        <h4>Progressive</h4>
+                        <p>With customised worksheets and tests, individuals will be able to learn at their own pace and track their own progress </p>
+                    </div>
+              </div> 
+          <div class ="container" id ="hometext">
+            
+            <div class="row">
+                <div class = "col-lg-4">
+                    <form action="" method="POST" id ="subform">
+                    {% csrf_token %}
+                        <h2>Sign up now to get early access!</h2>
+                        <br>
+                        <p><label for="country">Country:</label><input type="text" placeholder="" name="country" id="country"></p>
+                        <p><label for="persontype">Person Type:</label>
+                            <select name="persontype" id="persontype" name="cars">
+                              <option value="Self Learner">Self Learner</option>
+                              <option value="Parent">Parent</option>
+                              <option value="Tutor">Tutor</option>
+                              <option value="Student">Student</option>
+                              <option value="Others">Others</option>
+                            </select>
+                        </p>
+                        <p><label for="email">Email:</label><input type="email" placeholder="" name="email" id="email"></p>
+                        <input type="submit" id = "interest" class="btn-warning" value="I'm Interested">
+                    </form>
+                </div>
+            
+                <!-- Carousel  -->
+                <div id="carouselExampleIndicators" class="carousel slide col-lg-5" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block" src="{% static 'images/screenshot1.jpg' %}" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block" src="{% static 'images/screenshot2.jpg' %}" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block" src="{% static 'images/screenshot3.jpg' %}" alt="Third slide">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+              <br><br>
             </div>
-            <div class="col-lg-6">
-                <iframe width="420" height="315" class ="youtube" id ="youtubevid"
-            src="https://www.youtube.com/embed/7Qcg-lth_lE">
-                </iframe>
-            </div>
-          </div>
-        </div>        
+          </div> 
       </div>
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
         <div class="container">
             <div class="row aboutustext">
-                <div class="">
-                    <div class="misvis">
+                <div class="row">
+                    <div class="col-lg-6">
                         <h1>Our Mission</h1>
                         <p>To provide affordable, accessible and high quality education materials for all learners and educators in the world.</p>
                     </div>
-                    <div class ="misvis">
+                    <div class ="col-lg-6">
                         <h1>Our Vision</h1>
                         <p>Globally empowering educators and self- educators with equal access to high quality tools and teaching materials to unlock quality education for all.</p>
                     </div>
                 </div>
                 <!-- ABOUT US-->
-                <div class="">
-                  <div class ="misvis2">
+                <div class="row">
+                  <div class ="col-lg-12">
                     <h1>Our Team</h1>
                     <p>We are a team of 6 university students from who are very privileged to have gone through the Singapore education system and are concurrently studying in Singapore University of Design (SUTD) and Singapore Management University (SMU). We strongly believe in the value of a quality education, and that with access to the right resources and materials, anyone will be able to learn or to teach others. </p>
                   </div>
                 </div>
                 <div class="">
-                    <div class ="team-view">
-                        <img id="team-photo" src="{% static 'images/ryan_ng.JPEG' %}" alt="Avatar">
-                        <h3>Ryan Ng</h3>
-                        <h6>Chief Executive Officer</h6>
-                        <p>I am a strong believer in education being the great equalizer and am a champion of equal access for quality education for all. I have always been fascinated by alternative means of education, apart from the traditional. Previously, I have had short stints in tutoring and have dabbled in developing a e-learning portal.</p>
+                    <div class="row">
+                        <div class ="col-lg-6 prof">
+                            <img id="team-photo" src="{% static 'images/ryan_ng.JPEG' %}" alt="Avatar">
+                            <h3>Ryan Ng</h3>
+                            <h6>Chief Executive Officer</h6>
+                            <p>I am a strong believer in education being the great equalizer and am a champion of equal access for quality education for all. I have always been fascinated by alternative means of education, apart from the traditional. Previously, I have had short stints in tutoring and have dabbled in developing an e-learning portal.</p>
+                        </div>
+                        <div class ="col-lg-6 prof">
+                            <img id="team-photo" src="{% static 'images/eugene.jpg' %}" alt="Avatar">
+                            <h3>Eugene Chia</h3>
+                            <h6>Chief Technology Officer</h6>
+                            <p>With years of experience as a tutor myself, I understand the pains of tutors and parents when it comes to teaching. I believe a multifaceted e-learning/teaching platform is the way to go when it comes to nurturing the youth of our future. Coming from a background in Computer Science, I am poised to digitalise and revolutionise our education system.</p>
+                        </div>
                     </div>
-                    <div class ="team-view">
-                        <img id="team-photo" src="{% static 'images/eugene.jpg' %}" alt="Avatar">
-                        <h3>Eugene Chia</h3>
-                        <h6>Chief Technology Officer</h6>
-                        <p>With years of experience as a tutor myself, I understand the pains of tutors and parents when it comes to teaching. I believe a multifaceted e-learning/teaching platform is the way to go when it comes to nurturing the youth of our future. Coming from a background in Computer Science, I am poised to digitalise and revolutionise our education system.</p>
+                    <div class="row">
+                        <div class ="col-lg-6 prof">
+                            <img id="team-photo" src="{% static 'images/emerson.jpg' %}" alt="Avatar">
+                            <h3>Emerson Sng</h3>
+                            <h6>Chief Operations Officer</h6>
+                            <p>Since a very young age, I have always envisioned improving the education system to be more efficient and to make it easier for tutors and parents to better engage their students and children. Having experienced through different group and private tuitions, I am certain this space can be revolutionized.</p>
+                        </div>
+                        <div class ="col-lg-6 prof">
+                            <img id="team-photo" src="{% static 'images/chintak.jpg' %}" alt="Avatar">
+                            <h3>Ong Chin Tak</h3>
+                            <h6>Chief Marketing Officer</h6>
+                            <p>I have a passion for learning and strongly believe in broadening horizons through quality education. I strive to improve the education experience for students all around the world. As CMO, I ensure that Sherpa gets the voice it needs to stand out from an increasingly saturated education marketplace.</p>
+                        </div>
                     </div>
-                    <div class ="team-view">
-                        <img id="team-photo" src="{% static 'images/emerson.jpg' %}" alt="Avatar">
-                        <h3>Emerson Sng</h3>
-                        <h6>Chief Operations Officer</h6>
-                        <p>Since young, I’ve always envisioned improving the education system to be more efficient and to make it easier for tutors and parents to better engage their students and children. Having experienced through different group and private tuitions, I am certain this space can be revolutionized.</p>
-                    </div>
-                    <div class ="team-view">
-                        <img id="team-photo" src="{% static 'images/chintak.jpg' %}" alt="Avatar">
-                        <h3>Ong Chin Tak</h3>
-                        <h6>Chief Marketing Officer</h6>
-                        <p>I have a passion for learning and strongly believe in broadening horizons through quality education. I strive to improve the education experience for students all around the world. As CMO, I ensure that Sherpa gets the voice it needs to stand out from an increasingly saturated education marketplace.</p>
-                    </div>
-                    <div class ="team-view">
-                        <img id="team-photo" src="{% static 'images/gerald.jpg' %}" alt="Avatar">
-                        <h3>Gerald Woo</h3>
-                        <h6>Chief Data Officer</h6>
-                        <p>Education is one thing that I believe should always be improved upon. I believe that it is one of the main drivers of progress in society and opportunities for great education should be made available to everyone. As graduates of the Singapore education system, touted as one of the best in the world, I believe my team is well positioned to revolutionize the way South East Asia views education. Employing modern technology like Big Data and Artificial Intelligence, Sherpa will bring the region's concept of education to the next level.</p>
-                    </div>
-                    <div class ="team-view">
-                        <img id="team-photo" src="{% static 'images/hua_bing.jpg' %}" alt="Avatar">
-                        <h3>Yong Hua Bing</h3>
-                        <h6>Chief Finance Officer</h6>
-                        <p>I am a highly driven undergraduate with strong interest in financial analysis especially for startups. I have a fond interest in teaching and have taken up related opportunities through a teaching internship, being a teaching assistant in university and taking on the training duties in my university club.</p>
+                    <div class="row">
+                        <div class ="col-lg-6 prof">
+                            <img id="team-photo" src="{% static 'images/gerald.jpg' %}" alt="Avatar">
+                            <h3>Gerald Woo</h3>
+                            <h6>Chief Data Officer</h6>
+                            <p>Education is one thing that I believe should always be improved upon. I believe that it is one of the main drivers of progress in society and opportunities for great education should be made available to everyone. As graduates of the Singapore education system, touted as one of the best in the world, I believe my team is well positioned to revolutionize the way SEA views education. Employing modern technology like Big Data and Artificial Intelligence, Sherpa will bring the region's concept of education to the next level.</p>
+                        </div>
+                        <div class ="col-lg-6 prof">
+                            <img id="team-photo" src="{% static 'images/hua_bing.jpg' %}" alt="Avatar">
+                            <h3>Yong Hua Bing</h3>
+                            <h6>Chief Finance Officer</h6>
+                            <p>I am a highly driven undergraduate with strong interest in financial analysis especially for startups. I have a fond interest in teaching and have taken up related opportunities through a teaching internship, being a teaching assistant in university and taking on the training duties in my university club.</p>
+                        </div>
                     </div>
                 </div>                
                 
@@ -197,7 +261,30 @@
             </div>
           </div>
       </div>
-      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+      <div class="tab-pane fade contactus" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+          <div class="container">
+              <h1>Get in Touch</h1>
+              <h2>We are hiring too! (Send your cv too and ride the education revolution!)</h2>
+              <p>Contact us via Email: <b>admin@learnwithsherpa.com</b> or simply fill in the form below.</p>
+              <form action="" method="POST">
+                {% csrf_token %}
+                    <div class = "row">
+                        <p class = "col-lg-6"><input class="enquiryfield" type="text" placeholder="Name*" name="name" id="name"></p>
+                        <p class = "col-lg-6"><input class="enquiryfield" type="text" placeholder="Country*" name="country1" id="country1"></p>
+                    </div>
+                    <div class ="row">
+                        <p class = "col-lg-6"><input class="enquiryfield" type="number" placeholder="Phone Number" name="number" id="country1"></p>
+                        <p class = "col-lg-6"><input class="enquiryfield" type="email" placeholder="Email Address*" name="email1" id="email1"></p>
+                    </div>
+                    <div class ="row">
+                        <p class = "col-lg-12"><input class="enquiryfield1" type="text" placeholder="Enquiries" name="enquiries" id="enquiries"></p>
+                    </div>
+                    <input type="submit" id = "interest" class="btn-warning" value="Send">
+                </form>
+                <br>
+                <br>
+          </div>
+      </div>
     </div>
     {% block content %}{% endblock %}
 

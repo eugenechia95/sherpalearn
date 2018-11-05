@@ -155,18 +155,3 @@ SITE_URL = '/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-AWS_S3_SECURE_URLS = False       # use http instead of https
-AWS_QUERYSTRING_AUTH = False                # don't add complex authentication-related query parameters for requests
-AWS_S3_ACCESS_KEY_ID = "AKIAJPYKJE6BUKCWVASQ"                # Your S3 Access Key
-AWS_S3_SECRET_ACCESS_KEY = "MpreKxMkIQbsVD5Ucpv1yezCwNJ3flJyrqM7SJTl"            # Your S3 Secret
-AWS_STORAGE_BUCKET_NAME = "sherpalearnbucket"
-AWS_S3_HOST = "s3.ap-southeast-1.amazonaws.com"  # Change to the media center you chose when creating the bucket
-
-STATICFILES_STORAGE = "sherpa.s3utils.StaticS3BotoStorage"
-DEFAULT_FILE_STORAGE = "sherpa.s3utils.MediaS3BotoStorage"
-
-# the next monkey patch is necessary to allow dots in the bucket names
-import ssl
-if hasattr(ssl, '_create_unverified_context'):
-   ssl._create_default_https_context = ssl._create_unverified_context

@@ -15,6 +15,21 @@
 body {
     background-color: #f9f9f9;
     font-family: Mukta;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.carousel {
+    padding-top: 40px;
+    margin-left: 40px;
+}
+
+.carousel-item {
+    height: 40vh;
+}
+
+.carousel-item img {
+    width: 100%
 }
 
 #closebut {
@@ -25,17 +40,49 @@ body {
     color: black;
 }
 
+.contactus {
+    margin-top: 40px;
+    padding-left: 100px;
+}
+
 #hometext > h1{
     font-weight: 1000;
 }
 
 .container {
-    width: 100vw;
     max-width: 100vw;
+}
+
+.enquiryfield {
+    width: 70%;
+    padding: 20px;
+    
+}
+
+.enquiryfield1 {
+    width: 86%;
+    padding: 20px;
+}
+
+.featbar {
+    margin-top: 15vh;
+    padding-right: 80px;
+    text-align: center;
+    margin-bottom: 15vh;
+}
+.feat {
+    display: inline-block;
+    margin: auto;
+}
+
+.feat img {
+    width: 50%;
+    margin-bottom: 20px;
 }
 
 #homepic {
     width: 50vw;
+    opacity: 0.6;
 }
 
 #homepage {
@@ -47,9 +94,8 @@ body {
 }
 
 #hometext {
-    margin: 40px;
-    margin-left: 80px;
-    width: 40vw;
+    margin-top: 10vh;
+    padding: 40px;
     
 }
 
@@ -61,9 +107,8 @@ body {
 #hometext > form {margin-top: 40px;}
 
 #hometext2 {
-    margin: 40px;
-    margin-left: 80px;
-    margin-top: 30vh;
+    padding-left: 100px;
+    margin-top: 40px;
 }
 
 #homeimg {
@@ -90,6 +135,8 @@ body {
 
 .aboutustext {
     width:80vw;
+    padding-left: auto;
+    padding-right: auto;
     margin:auto;
 }
 
@@ -106,6 +153,7 @@ body {
     height: 100px;
     margin: 40px 40px;
 }
+
 
 .team-view {
     display: inline-block;
@@ -173,6 +221,14 @@ body {
     width: 40vw;
 }
 
+.prof {
+    padding: 40px;
+}
+
+#subform label {
+    margin-right: 20px;
+}
+
 .youtube {
     display: inline-block;
 }
@@ -181,10 +237,12 @@ body {
     margin-top: 
 }
 
+#yvid {
+    margin-left: 40px;
+}
 
 @media (max-width: 992px) { 
     .container {
-    width: 80vw;
     margin-left: -60px;
     margin-right: 20px;}
     
@@ -213,6 +271,42 @@ body {
     
     #hometext2 {
     margin-top: 0px;
-}
+    }
+    
+    
+    
+    .youtube {
+        margin-top: 40px;
+    }
+    
+    #youtubevid {
+        width: 70vw;
+        height: 40vh;
+    }
+    
+    .featbar {
+        padding-right: 0px;
+    }
+    
+    .feat img {
+        width: 20vw;
+    }
+    
+    #subform {
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+    
+    .carousel {
+        margin-top: 40px;
+        width: 150%;
+        padding-left: 40px;
+    }
+    
+    .contactus {
+        margin-top: 40px;
+    }
+    
 }
 

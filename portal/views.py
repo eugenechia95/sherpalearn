@@ -11,9 +11,22 @@ from django.contrib.auth import login, authenticate
 
 def home(request):
     if request.method == 'POST':
+            if request.POST.get('email'):
+                country = request.POST.get('country')
+                persontype = request.POST.get('persontype')
+                email = request.POST.get('email')
+                
+                Subscribe.objects.create(email=email, country=country, persontype=persontype)
+                
             if request.POST.get('email1'):
+                name = request.POST.get('name')
+                country1 = request.POST.get('country1')
+                number = request.POST.get('number')
                 email1 = request.POST.get('email1')
-                Subscribe.objects.create(email=email1)
+                enquiries = request.POST.get('enquiries')
+                
+                Enquiry.objects.create(name=name, email=email1, country=country1, 
+                                       number=number, enquiries=enquiries)
 
     return render(request, 'home.html')
 
