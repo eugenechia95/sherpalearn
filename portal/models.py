@@ -115,7 +115,7 @@ class Enquiry(models.Model):
         
     name = models.CharField(max_length=200, null=True, blank=True)
     country = models.CharField(max_length=200, null=True, blank=True)
-    number = models.IntegerField(max_length=200, null=True, blank=True)
+    number = models.IntegerField(null=True, blank=True)
     email = models.EmailField(max_length=254, null=True, blank=True)
     enquiries = models.TextField(null=True, blank=True)
     

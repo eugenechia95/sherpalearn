@@ -19,11 +19,6 @@ body {
     text-justify: inter-word;
 }
 
-.carousel {
-    padding-top: 40px;
-    margin-left: 40px;
-}
-
 .carousel-item {
     height: 40vh;
 }
@@ -225,6 +220,10 @@ body {
     padding: 40px;
 }
 
+#subform {
+    margin-right: 40px;
+}
+
 #subform label {
     margin-right: 20px;
 }
@@ -269,6 +268,7 @@ body {
         margin-top: 10px;
     }
     
+    
     #hometext2 {
     margin-top: 0px;
     }
@@ -292,6 +292,12 @@ body {
         width: 20vw;
     }
     
+    .subformc{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     #subform {
         width: 80%;
         display: block;
@@ -299,7 +305,7 @@ body {
     }
     
     .carousel {
-        margin-top: 40px;
+        margin-top: 80px;
         width: 150%;
         padding-left: 40px;
     }
