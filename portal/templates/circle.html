@@ -1,0 +1,311 @@
+{% extends 'base_generic.html' %}
+
+{% load static %}
+
+{% block css %}
+      <link rel="stylesheet" href="{% static 'css/users.css' %}">
+      <link rel="stylesheet" href="{% static 'css/circle.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+{% endblock %} 
+
+{% block content %}
+
+ <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img id ="homeimg" src="{% static 'images/Squarelogo.png' %}">
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Browse</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Exam Paper</a>
+                        </li>
+                        <li>
+                            <a href="#">Quizzes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Your Subjects</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Students</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Gerald Woo</a>
+                        </li>
+                        <li>
+                            <a href="#">Yong Hua Bing</a>
+                        </li>
+                        <li>
+                            <a href="#">Emerson Sng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Worksheets</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="" class="download">Account</a>
+                </li>
+                <li>
+                    <a href="" class="article bg-danger">Log Out</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            
+            <h1><b>MOTION IN A CIRCLE</b></h1>
+            <h6><b>LAST UPDATED NOV 2018</b></h6>
+            <br>
+            <br>
+            
+                <div class = "row">
+                <div>
+                    <h5>SHERPA® WORKSHEETS</h5>
+                    <div class="card d-inline-block" style="width: 8rem;">
+                      <div class ="imgbord">
+                          <a href="{% url 'circle' %}"><img class="card-img-top" src="{% static 'images/PrecessionOfATop.svg.png' %}"  alt="Card image cap"></a>
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text">
+                        <p class ="cardassign">SHERPA®</p>
+                        <p class="card-text">MOTION IN A CIRCLE I</p>
+                      </div>
+                    </div>
+
+                    <div class="card d-inline-block" style="width: 8rem;">
+                      <div class ="imgbord">
+                          <img class="card-img-top" src="{% static 'images/PrecessionOfATop.svg.png' %}" alt="Card image cap">
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text">
+                        <p class ="cardassign">SHERPA®</p>
+                        <p class="card-text">MOTION IN A CIRCLE II</p>
+                      </div>
+                    </div>
+
+                    <div class="card d-inline-block" style="width: 8rem;">
+                      <div class ="imgbord">
+                          <img class="card-img-top" src="{% static 'images/dynamic.jpg' %}" alt="Card image cap">
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text">
+                        <p class ="cardassign">SHERPA®</p>
+                        <p class="card-text">MOTION IN A CIRCLE III</p>
+
+                      </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h5>COMMUNITY WORKSHEETS</h5>
+                    <div class="card d-inline-block" style="width: 8rem;">
+                      <div class ="imgbord">
+                          <img class="card-img-top" src="{% static 'images/Squarelogo.png' %}" alt="Card image cap">
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text">
+                        <p class ="cardassign">SHERPA COMMUNITY TUTORS</p>
+                        <p class="card-text">A LVL PHYSICS 2017-2019 PRACTICE</p>
+                      </div>
+                    </div>
+
+                    <div class="card d-inline-block" style="width: 8rem;">
+                      <div class ="imgbord">
+                          <img class="card-img-top" src="{% static 'images/smu.png' %}" alt="Card image cap">
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text">
+                        <p class ="cardassign">SMU TEACHING CIRCLE</p>
+                        <p class="card-text">A LVL PHYSICS - MOTION IN A CIRCLE</p>
+                      </div>
+                    </div>
+
+                    <div class="card d-inline-block" style="width: 8rem;">
+                      <div class ="imgbord">
+                          <img class="card-img-top" src="{% static 'images/abc.jpg' %}" alt="Card image cap">
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text">
+                        <p class ="cardassign">SMU TEACHING CIRCLE</p>
+                        <p class="card-text">EOY CIRCULAR MOTION PRACTICE</p>
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            
+            <div class="container">
+            <button type="button" class="btn btn-warning togbut">Create Worksheet</button>
+            <button type="button" class="btn btn-warning togbut" data-toggle="modal" data-target="#exampleModal">Auto Generate</button>
+            <button type="button" class="btn btn-secondary togbut">Select</button>
+                
+                <!-- Modal1 -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Auto Generate</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                            <div id ="inital">
+                                <form>
+                                    <div class="form-group row">
+                                        <label for="question" class="col-sm-2 col-form-label">Questions</label>
+                                        <div class="col-sm-10">
+                                          <input type="number" class="form-control" id="question" placeholder="10">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="difficulty" class="col-sm-2 col-form-label">Difficulty</label>
+                                        <div class="col-sm-10">
+                                          <select name="difficulty">
+                                              <option value="Easy">Easy</option>
+                                              <option value="Medium">Medium</option>
+                                              <option value="Hard">Hard</option>
+                                            </select>
+                                        </div>
+                                    </div>     
+                                    <div class="form-group row">
+                                        <label for="com" class="col-sm-2 col-form-label">Exclude Completed</label>
+                                        <div class="col-sm-10">
+                                          <select name="com">
+                                              <option value="Yes">Yes</option>
+                                              <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="shuf" class="col-sm-2 col-form-label">Shuffle</label>
+                                        <div class="col-sm-10">
+                                          <select name="shuf">
+                                              <option value="Yes">Yes</option>
+                                              <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                  <button id="generate" class="btn btn-warning" data-toggle="modal" data-target="#Modal2" data-dismiss="modal">Generate Worksheet</button>
+                                </form>
+                            </div>
+                        
+                          </div>
+                          <div class="modal-footer">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+                <!-- Modal2 -->
+                <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel2">Auto Generate</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                            <div id ="inital">
+                                <form>
+                                    <div class="form-group row">
+                                        <label for="question" class="col-sm-2 col-form-label">New Worksheet</label>
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" id="question" placeholder="Title">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-secondary">Preview</button>
+                                    <button type="submit" class="btn btn-secondary">Manually Edit</button>
+                                    <button type="submit" class="btn btn-secondary">Save Worksheet</button>
+                                    <div class="form-group row">
+                                        <label for="shuf" class="col-sm-2 col-form-label">Assign Homework to</label>
+                                        <div class="col-sm-10">
+                                          <select name="shuf">
+                                              <option value="Gerald Woo">Gerald Woo</option>
+                                              <option value="Emerson Sng">Emerson Sng</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <input type="checkbox"> with Answers
+                                    <input type="checkbox"> with Worked Solutions
+                                  <div><button type="submit" id="generate" class="btn btn-light">Assign</button></div>
+                                </form>
+                            </div>
+                        
+                      </div>
+                      <div class="modal-footer">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
+    
+{% block script %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+    
+{% endblock %}

@@ -68,3 +68,14 @@ def users(request):
         request,
         'users.html',context={"worksheets":worksheets, "newws":newworksheets,"subjects":subjects, "topics":topics, "assignedws":assignedws})
     
+@login_required
+def gwoo(request):
+    return render(
+        request,
+        'gwoo.html')
+    
+@login_required
+def circle(request):
+    return render(
+        request,
+        'circle.html')

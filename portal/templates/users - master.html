@@ -35,7 +35,7 @@
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Students</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="{% url 'gwoo' %}">Gerald Woo</a>
+                            <a href="#">Gerald Woo</a>
                         </li>
                         <li>
                             <a href="#">Yong Hua Bing</a>
@@ -106,12 +106,16 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img class="d-block" src="{% static 'images/Squarelogo.png' %}" alt="First slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Homepage</h5>
+                    <p>Test</p>
+                  </div>
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block" src="{% static 'images/aboutus.jpg' %}" alt="Second slide">
+                  <img class="d-block" src="{% static 'images/study.jpg' %}" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block" src="{% static 'images/ljxbanner.jpg' %}" alt="Third slide">
+                  <img class="d-block" src="{% static 'images/aboutus.jpg' %}" alt="Third slide">
                 </div>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -127,68 +131,23 @@
             <h5>SUGGESTED FOR YOUR STUDENTS</h5>
             <div>
                 <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/index.jpg' %}" alt="Card image cap">
-                  </div>
+                  <img class="card-img-top" src="..." alt="Card image cap">
                   <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Emerson Sng</p>
-                    <p class="card-text">CALCULUS I</p>
-                  </div>
-                </div>
-                
-                <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/index.jpg' %}" alt="Card image cap">
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Emerson Sng</p>
-                    <p class="card-text">CALCULUS II</p>
+                    <p class="card-text">Some quick example text</p>
                   </div>
                 </div>
 
                 <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/index.png' %}" alt="Card image cap">
-                  </div>
+                  <img class="card-img-top" src="..." alt="Card image cap">
                   <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Emerson Sng</p>
-                    <p class="card-text">LOGARITHMS</p>
+                    <p class="card-text">Some quick example text</p>
                   </div>
                 </div>
-                
+
                 <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/PrecessionOfATop.svg.png' %}" alt="Card image cap">
-                  </div>
+                  <img class="card-img-top" src="..." alt="Card image cap">
                   <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Gerald Woo</p>
-                    <p class="card-text">MOMENTUM</p>
-                  </div>
-                </div>
-                
-                <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/resp.jpg' %}" alt="Card image cap">
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Gerald Woo</p>
-                    <p class="card-text">RESPIRATORY</p>
-                  </div>
-                </div>
-                
-                <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/mac.jpg' %}" alt="Card image cap">
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Yong Hua Bing</p>
-                    <p class="card-text">PYTHON</p>
+                    <p class="card-text">Some quick example text</p>
                   </div>
                 </div>
             </div>
@@ -198,109 +157,38 @@
             <h5>NEW WORKSHEETS THIS WEEK</h5>
             
             <div>
+                {% for worksheet in newws %}
                 <div class="card d-inline-block" style="width: 8rem;">
                   <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/images1.png' %}" alt="Card image cap">
+                      <img class="card-img-top" src="{{MEDIA_URL}}{{worksheet.icon}}" alt="Card image cap">
                   </div>
                   <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Emerson Sng</p>
-                    <p class="card-text">BODMAS RULES</p>
+                    <p class="card-text">{{worksheet.title}}</p>
                   </div>
                 </div>
-                
-                <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/images.png' %}" alt="Card image cap">
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Emerson Sng</p>
-                    <p class="card-text">CIRCLES</p>
-                  </div>
-                </div>
-
-                <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/index.png' %}" alt="Card image cap">
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Emerson Sng</p>
-                    <p class="card-text">LOGARITHMS II</p>
-                  </div>
-                </div>
-                
-                <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/Squarelogo.png' %}" alt="Card image cap">
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Gerald Woo</p>
-                    <p class="card-text">A LVL PREP</p>
-                  </div>
-                </div>
-                
-                <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/physics.jpg' %}" alt="Card image cap">
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Yong Hua Bing</p>
-                    <p class="card-text">O LVL PHYSICS</p>
-                  </div>
-                </div>
-                
-                <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/Squarelogo.png' %}" alt="Card image cap">
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Yong Hua Bing</p>
-                    <p class="card-text">O LVL PREP</p>
-                  </div>
-                </div>
+                {% endfor %}
             </div>
             
             <div class="line"></div>
             
             <h5>CURRENTLY ASSIGNED AS HOMEWORK</h5>
             <div>
+                {% for asworksheet in assignedws %}
                 <div class="card d-inline-block" style="width: 8rem;">
                   <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/inertia.jpg' %}" alt="Card image cap">
+                      <img class="card-img-top" src="{{MEDIA_URL}}{{asworksheet.icon}}" alt="Card image cap">
                   </div>
                   <div class="card-body">
                     <p class="card-text">
-                    <p class ="cardassign">For Emerson Sng</p>
-                    <p class="card-text">INERTIA</p>
+                        {% if asworksheet.profile_assigned %}
+                            {% for profile in asworksheet.profile_assigned.all %}
+                                <p class ="cardassign">For: {{profile.user.first_name}} {{profile.user.last_name}}</p>
+                            {% endfor %}
+                        {% endif %}
+                    <p class="card-text">{{asworksheet.title}}</p>
                   </div>
                 </div>
-                
-                <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/abc.jpg' %}" alt="Card image cap">
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Emerson Sng</p>
-                    <p class="card-text">PHONICS</p>
-                  </div>
-                </div>
-
-                <div class="card d-inline-block" style="width: 8rem;">
-                  <div class ="imgbord">
-                      <img class="card-img-top" src="{% static 'images/mac.jpg' %}" alt="Card image cap">
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                    <p class ="cardassign">For Gerald Woo</p>
-                    <p class="card-text">PYTHON</p>
-                  </div>
-                </div>
+                {% endfor %}
             </div>
 
         </div>
