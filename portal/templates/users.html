@@ -9,11 +9,11 @@
 
 {% block content %}
 
- <div class="wrapper">
+ <div class="wrapper animate-bottom" style="display:none;" id="myDiv">
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <img id ="homeimg" src="{% static 'images/Squarelogo.png' %}">
+                <a href="{% url 'users' %}"><img id ="homeimg" src="{% static 'images/Squarelogo.png' %}"></a>
             </div>
 
             <ul class="list-unstyled components">
@@ -55,10 +55,10 @@
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="" class="download">Account</a>
+                    <a href="" class="btn-primary">Account</a>
                 </li>
                 <li>
-                    <a href="" class="article bg-danger">Log Out</a>
+                    <a href="{% url 'home' %}" class="btn-danger">Log Out</a>
                 </li>
             </ul>
         </nav>
@@ -311,5 +311,6 @@
             });
         });
     </script>
+    
     
 {% endblock %}

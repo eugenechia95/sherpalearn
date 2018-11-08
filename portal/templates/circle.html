@@ -10,11 +10,11 @@
 
 {% block content %}
 
- <div class="wrapper">
+<div class="wrapper animate-bottom" style="display:none;" id="myDiv">
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <img id ="homeimg" src="{% static 'images/Squarelogo.png' %}">
+                <a href="{% url 'users' %}"><img id ="homeimg" src="{% static 'images/Squarelogo.png' %}"></a>
             </div>
 
             <ul class="list-unstyled components">
@@ -56,10 +56,10 @@
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="" class="download">Account</a>
+                    <a href="" class="btn-primary">Account</a>
                 </li>
                 <li>
-                    <a href="" class="article bg-danger">Log Out</a>
+                    <a href="{% url 'home' %}" class="btn-danger">Log Out</a>
                 </li>
             </ul>
         </nav>
@@ -245,18 +245,26 @@
                       <div class="modal-body">
                             <div id ="inital">
                                 <form>
-                                    <div class="form-group row">
+                                    <div class="form-group row align-middle">
                                         <label for="question" class="col-sm-2 col-form-label">New Worksheet</label>
                                         <div class="col-sm-10">
                                           <input type="text" class="form-control" id="question" placeholder="Title">
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#preview" data-dismiss="modal">Preview</button>
-                                    <button type="submit" class="btn btn-secondary">Manually Edit</button>
-                                    <button type="submit" class="btn btn-secondary">Save Worksheet</button>
-                                    <div class="form-group row">
-                                        <label for="shuf" class="col-sm-2 col-form-label">Assign Homework to</label>
-                                        <div class="col-sm-10">
+                                    <div class="row text-center">
+                                        <div class="col-sm">
+                                            <button type="submit" class="col-sm btn btn-secondary" data-toggle="modal" data-target="#preview" data-dismiss="modal">Preview</button>
+                                        </div>
+                                        <div class="col-sm">
+                                            <button type="submit" class="col-sm btn btn-secondary">Manually Edit</button>
+                                        </div>
+                                        <div class="col-sm">
+                                            <button type="submit" class="col-sm btn btn-secondary">Save Worksheet</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row assign">
+                                        <label for="shuf" class="col-sm-5 col-form-label">Assign Homework to</label>
+                                        <div class="col-sm-7">
                                           <select name="shuf">
                                               <option value="Gerald Woo">Gerald Woo</option>
                                               <option value="Emerson Sng">Emerson Sng</option>
@@ -265,7 +273,7 @@
                                     </div>
                                     <input type="checkbox"> with Answers
                                     <input type="checkbox"> with Worked Solutions
-                                  <div><a id="generating" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Assign</a></div>
+                                  <div class="row justify-content-center"><a id="generating" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Assign</a></div>
                                 </form>
                             </div>
                         
@@ -316,7 +324,6 @@
                     </div>
                   </div>
                 </div>
-                
                 
                 <div>
                 <h5>MY WORKSHEETS</h5>

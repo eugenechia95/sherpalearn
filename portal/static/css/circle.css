@@ -1,3 +1,9 @@
+.abc {margin-right:40px;}
+
+.assign {
+    margin-top: 40px;
+}
+
 .togbut {
     margin-right: 20px;
 }
@@ -19,4 +25,9 @@
     text-align: center;
     font-size: 12px;
     line-height: 1.42857;
+}
+
+#generating {
+    color: white;
+    margin-top: 40px;
 }
