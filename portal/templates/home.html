@@ -272,8 +272,8 @@
           <form action="" method="POST" id ="subform">
             {% csrf_token %}
                 <br>
-                <h4><label class = "col-lg-2 col-2" for="country">Country:</label><input class = "col-lg-3 col-5" type="text" placeholder="" name="country" id="country"></h4>
-                <h4><label class = "col-lg-2 col-2" for="persontype">I am a:</label>
+                <h4><label class = "col-lg-2" for="country">Country:</label><input class = "col-lg-3 col-5" type="text" placeholder="" name="country" id="country"></h4>
+                <h4><label class = "col-lg-2" for="persontype">I am a:</label>
                     <select name="persontype" class = "col-lg-3 col-5" id="persontype" name="cars">
                       <option value="Self Learner">Self Learner</option>
                       <option value="Parent">Parent</option>
@@ -282,7 +282,7 @@
                       <option value="Others">Others</option>
                     </select>
                 </h4>
-                <h4><label class = "col-lg-2 col-2" for="email">Email:</label><input  class = "col-lg-3 col-5" type="email" placeholder="" name="email" id="email"></h4>
+                <h4><label class = "col-lg-2" for="email">Email:</label><input  class = "col-lg-3 col-5" type="email" placeholder="" name="email" id="email"></h4>
               <br>
                 <input type="submit" id = "interest" class="btn btn-xl btn-warning" value="I'm Interested">
             </form>
