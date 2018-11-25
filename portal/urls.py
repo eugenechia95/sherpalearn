@@ -16,6 +16,7 @@ urlpatterns += [
     path('users/', views.users, name='users'), 
     path('gwoo/', views.gwoo, name='gwoo'), 
     path('circle/', views.circle, name='circle'), 
+    path('bulkcreate/', views.bulk, name='bulk')
     ]
 
 
