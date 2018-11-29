@@ -7,8 +7,14 @@
 
 {% block content %}
 
+<div class ="container-fluid">
+    <div class="row align-items-center">
+    <h2 class = "col-lg-8" id="intro">Thanks for joining us! Before we begin, let's set up your Sherpa Beta Account first!</h2>
+    <a href="" class="col-lg-4"><img id ="homeimg" src="{% static 'images/Squarelogo.png' %}"></a>
+    </div>
+</div>
+
 <div class="container-fluid">
-    <h2>Thanks for joining us! Before we begin, let's set up your Sherpa Beta Account first!</h2>
     <br>
     <form action="" method="POST">
     {% csrf_token %}
@@ -293,7 +299,7 @@
               <option value="Others">Others</option>
             </select>
       </div>
-      <button type="submit" class="btn btn-primary">Updates Account!</button>
+      <button type="submit" class="btn btn-primary" id ="update">Update Account!</button>
     </form>
 </div>
     
