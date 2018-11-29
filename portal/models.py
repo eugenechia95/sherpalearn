@@ -13,7 +13,8 @@ class AccountType(models.Model):
         ('Student', 'Student'),
         ('Parent', 'Parent'),
         ('Child', 'Child'),
-        ('Self Learner', 'Self Learner')
+        ('Self Learner', 'Self Learner'),
+        ('Others', 'Others')
     ]
     account_type = models.CharField(max_length=12)
 
@@ -24,6 +25,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     account_type = models.ForeignKey("AccountType", on_delete=models.CASCADE, null=True, blank=True)
     connections = models.ManyToManyField("self", blank=True)
+    country = models.CharField(max_length=64, null=True, blank=True)
 
     def __str__(self):
         return self.user.username

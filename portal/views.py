@@ -10,6 +10,11 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.hashers import make_password
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash
 
 import csv
 
@@ -57,7 +62,7 @@ def signup(request):
 def checkauth(request):
     if request.user.is_authenticated:
         #your logic here
-        return redirect("users/")# or your url name
+        return redirect("beta/")# or your url name
     
 
 @login_required
@@ -110,3 +115,51 @@ def bulk(request):
         Profile.objects.create(user=eachuser)
     
     return render(request, 'bulkcreate.html')
+
+@login_required
+def beta(request):
+    current_user = request.user
+    if not current_user.email:
+        return HttpResponseRedirect(reverse('updatedetails'))
+    return render(
+        request,
+        'betawelcome.html')
+    
+@login_required
+def updatedetails(request):
+    current_user = request.user
+    current_profile = (Profile.objects.filter(user=current_user))[0]
+    if request.method == 'POST':
+        current_user.username = request.POST.get('username')
+        current_user.email = request.POST.get('Email1')
+        current_user.first_name = request.POST.get('firstname')
+        current_user.last_name = request.POST.get('lastname')
+        current_profile.country = request.POST.get('country')
+        account_type = request.POST.get('persontype')
+        allaccounttypes = AccountType.objects.all()
+        for i in allaccounttypes:
+            if account_type == i.account_type:
+                current_profile.account_type = i
+        current_user.save()
+        current_profile.save()
+        return HttpResponseRedirect(reverse('pwreset'))          
+    return render(
+        request,
+        'updatedetails.html')
+    
+@login_required    
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return HttpResponseRedirect(reverse('beta')) 
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'registration/password_reset.html', {
+        'form': form
+    })
