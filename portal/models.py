@@ -7,15 +7,6 @@ from django.dispatch import receiver
 # Create your models here.
 
 class AccountType(models.Model):
-    TYPES = [
-        ('Free', 'Free'),
-        ('Tutor', 'Tutor'),
-        ('Student', 'Student'),
-        ('Parent', 'Parent'),
-        ('Child', 'Child'),
-        ('Self Learner', 'Self Learner'),
-        ('Others', 'Others')
-    ]
     account_type = models.CharField(max_length=12)
 
     def __str__(self):
