@@ -9,21 +9,22 @@
 {% block content %}
 
  <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Sherpa Learning</a>
+        <a href=""><img id ="homeimg" src="{% static 'images/Squarelogo.png' %}"></a>
+          <a class="navbar-brand" href=""><b>Sherpa Learning</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+                <a class="nav-link" href="{% url 'home' %}" id ="home"><b>Home</b>
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Log Out</a>
+                <a class="btn btn-danger" id ="logout" href="{% url 'logout' %}"><b>Log Out</b></a>
             </li>
           </ul>
         </div>

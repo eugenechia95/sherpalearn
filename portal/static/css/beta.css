@@ -5,15 +5,32 @@
  */
 
 body {
-  background: url('https://raw.githubusercontent.com/eugenechia95/sherpalearn/master/portal/static/images/beta.jpg') no-repeat center center fixed;
+  background: url('https://raw.githubusercontent.com/eugenechia95/sherpalearn/master/portal/static/images/beta.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  
 }
 
 #content {
-    padding: 100px !important;
+    padding: 20px;
     margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    border: 5px rgba(0,0,0, 0.5) groove;
+    margin-top: 40vh;
+    background-color: rgba(255,255,255, 0.5);
+}
+
+#homeimg {
+    width: 80px;
+    margin-right: 20px;
+}
+
+#logout {
+    color: white;
+}
+
+#home {
+    margin-right: 20px;
 }
