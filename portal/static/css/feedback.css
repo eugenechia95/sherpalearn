@@ -1,0 +1,37 @@
+/*################################\
+        GLOBAL
+\*###############################*/
+html, body, form {
+    padding: 0;
+    margin: 0;
+    background-color: #FFD200;
+}
+
+/*################################\
+        HEADER
+\*###############################*/
+header{
+        background: url("https://images.unsplash.com/photo-1515222410484-613a51c43721?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") no-repeat center;
+        background-size: cover;           
+}
+.jumbotron{ margin-bottom:0; }
+
+/*################################\
+        FORM
+\*###############################*/
+
+.textarea-container textarea{        
+        resize: vertical;
+        height: 13vh;
+        padding: 16px;
+}
+.question, .person{ margin: 16px 0 0 0; }
+.text-right{ font-size: .8rem; }
+
+
+/*################################\
+        MEDIA QUERIES
+\*###############################*/
+@media screen and (max-width: 576px){
+        .header-main-container { background-color: rgba(137,131,87,.8); }        
+}

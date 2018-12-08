@@ -115,4 +115,18 @@ class Enquiry(models.Model):
     def __str__(self):
         return self.name
     
+class Demo(models.Model):
+        
+    name = models.CharField(max_length=200, null=True, blank=True)
+    email = models.EmailField(max_length=254, null=True, blank=True)
+    recommend = models.EmailField(max_length=254, null=True, blank=True)
+    mostimportant = models.EmailField(max_length=254, null=True, blank=True)
+    useability = models.IntegerField(null=True, blank=True)
+    content = models.IntegerField(null=True, blank=True)
+    aesthetics = models.IntegerField(null=True, blank=True)
+    comments = models.TextField(null=True, blank=True)
+    
+    def __str__(self):
+        return self.name
+    
 

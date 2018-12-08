@@ -66,6 +66,12 @@ def checkauth(request):
     
 
 @login_required
+def demofirst(request):
+    return render(
+        request,
+        'demofirst.html')
+
+@login_required
 def users(request):
     worksheets=Worksheet.objects.all()
     newworksheets = Worksheet.objects.filter(status='U')
@@ -89,6 +95,30 @@ def circle(request):
     return render(
         request,
         'circle.html')
+    
+@login_required
+def feedback(request):
+    
+    if request.method == 'POST':
+            if request.POST.get('name'):
+                name = request.POST.get('name')
+                email = request.POST.get('email')
+                recommend = request.POST.get('recommend')
+                mostimportant = request.POST.get('like')
+                useability = request.POST.get('useability')
+                content = request.POST.get('content')
+                aesthetics = request.POST.get('aesthetics')
+                comments = request.POST.get('comment')
+                
+                Demo.objects.create(name=name, email=email, recommend=recommend, 
+                                         mostimportant=mostimportant, useability=useability,
+                                         content=content, aesthetics=aesthetics,
+                                         comments=comments)
+            return redirect('home')
+
+    return render(
+        request,
+        'feedback.html')
     
 @staff_member_required
 def bulk(request):

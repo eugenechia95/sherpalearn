@@ -32,6 +32,11 @@ urlpatterns += [
     path('', include('django.contrib.auth.urls')),
     path('signup/', signup, name='signup'),
     path('portal/', include('portal.urls')),
+    path('demofirst/', views.demofirst, name='demofirst'),
+    path('livedemo/', views.users, name='livedemo'), 
+    path('student/', views.gwoo, name='student'), 
+    path('circle/', views.circle, name='circle'), 
+    path('feedback/', views.feedback, name='feedback'), 
 ]
 
 #Add URL maps to redirect the base URL to our application

@@ -42,3 +42,7 @@ class SubscribeAdmin(admin.ModelAdmin):
 @admin.register(Enquiry)
 class EnquiryAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(Demo)
+class DemoAdmin(admin.ModelAdmin):
+    pass

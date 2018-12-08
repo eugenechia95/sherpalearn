@@ -1,0 +1,31 @@
+{% extends 'base_generic.html' %}
+
+{% load static %}
+
+{% block css %}
+      <link rel="stylesheet" href="{% static 'css/demofirst.css' %}"> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+{% endblock %} 
+
+{% block content %}
+
+<div class="align-items-center" >
+    <h1 class="d-flex justify-content-center text-center align-items-center"><b>Welcome to our live Demo!</b></h1>
+    <br>
+    <h4 class="text-center align-items-center">The <span><b>Sherpa Live Demo</b></span> gives users a quick glimpse into what our portal contains once you subscribe as a beta member!</h4>
+    <h4 class="justify-content-center text-center align-items-center">As this is a demo, functionality is limited and the experience is largely guided.</h4>
+    <h4 class="justify-content-center text-center align-items-center">Click on the <img class ="clickhere" id="autogen" src="{% static 'images/clickhere.png' %}"> button to navigate across the portal!</h4>
+    <h6 class="justify-content-center text-center align-items-center">*We recommend trying this live demo on a laptop or PC for the most optimised experience</h6>
+</div>
+
+<div class="justify-content-center text-center align-items-center"><img id ="homeimg" src="{% static 'images/Squarelogo.png' %}"></div>
+                    <div class="d-flex justify-content-center">
+                        <a href="{% url 'livedemo' %}"><button type="button" class="btn btn-info" id="enter">Enter</button></a>
+                    </div>  
+    
+{% endblock %}
+    
+{% block script %}
+    
+    
+{% endblock %}

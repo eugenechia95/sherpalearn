@@ -63,6 +63,11 @@
           <a class="js-scroll-trigger" href="#enquiry">Connect</a>
         </li>
         <li class="sidebar-nav-item">
+          <a href="{% url 'demofirst' %}"><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" >
+                Try Live Demo
+            </button></a>
+        </li>
+        <li class="sidebar-nav-item">
             <a href="{% url 'beta' %}"><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" >
                 Beta Login
             </button></a>
@@ -91,14 +96,13 @@
             <img class="img-fluid" width="40%" src="{% static 'images/Untitled-1-Recovered.png' %}" alt="">
 <!--             <h2>Sherpa</h2> -->
             <p> </p>
+              <br>
             <h3>What is Sherpa?</h3>
-            <p class="lead mb-5">Sherpa is a <b>one-stop learning platform</b> with a <b>global database of educational resources</b> for the student and educators of the internet age. The progress of individual learners is also tracked through, and <b>customised worksheets and tests</b> are generated for them.<br><br>Through making education <b>simple and affordable</b>, we hope to <b>empower individuals</b> to take the first steps in their education journey, no matter where they are in the world.</p>
+              <p class="lead mb-5">Sherpa is an <b>EdTech solution</b> that helps <b>parents to get involved with their children's education</b>. Sherpa possesses a <b>wide range of teaching resources tailored for parents</b> to help you be the <b>guide for your child's education journey</b>.  Through our in-depth <b>performance analytics</b>, Sherpa will also help you to <b>track your child's progress</b>, giving you greater insights into their educational journey.  
+              </p>
 <!--             <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">Features</a> -->
             <h3>Our Mission</h3>
-            <p class="lead mb-5">To provide affordable, accessible and high quality education materials for all learners and educators in the world.</p>
-            <h3>Our Vision</h3>
-            <p class="lead mb-5">Globally empowering educators and self- educators with equal access to high quality tools and teaching materials to unlock quality education for all.</p>
-            <iframe width=100% height=500px src="https://www.youtube.com/embed/7Qcg-lth_lE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="lead mb-5">Globally empowering parents with access to high quality tools and specially tailored teaching materials to help keep up with their childrens' educational journey</p>
           </div>
         </div>
       </div>
@@ -119,7 +123,7 @@
             <h4>
               <strong>Comprehensive</strong>
             </h4>
-            <p class="text-faded mb-0">Sherpa’s database covers the entire range of secondary and pre-university level topics in mathematics and the sciences</p>
+            <p class="text-faded mb-0">Sherpa’s database covers the entire range of secondary and pre-university level topics in mathematics </p>
           </div>
           <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
             <span class="service-icon rounded-circle mx-auto mb-3">
@@ -128,7 +132,7 @@
             <h4>
               <strong>Seamless</strong>
             </h4>
-            <p class="text-faded mb-0">Our platform is easily navigable with the resources sorted according to each user’s learning profile e.g. high school student from Indonesia</p>
+            <p class="text-faded mb-0">Our platform is easily navigable with the resources sorted according to subjects, topics and difficulty.</p>
           </div>
           <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
             <span class="service-icon rounded-circle mx-auto mb-3">
@@ -137,7 +141,7 @@
             <h4>
               <strong>Progressive</strong>
             </h4>
-            <p class="text-faded mb-0">With customised worksheets and tests, individuals will be able to learn at their own pace and track their own progress</p>
+            <p class="text-faded mb-0">Assign customised worksheets and tests for your child, allowing him/her to further learn at their own pace (you can track their progress as well)</p>
           </div>
           <div class="col-lg-3 col-md-6">
             <span class="service-icon rounded-circle mx-auto mb-3">
@@ -146,7 +150,7 @@
             <h4>
               <strong>Guided</strong>
             </h4>
-            <p class="text-faded mb-0">All of our worksheets come with fully worked solutions that can help even a newbie become a teaching pro</p>
+            <p class="text-faded mb-0">All of our worksheets come with fully worked solutions tailored for parents that can help anyone become a teaching pro</p>
           </div>
         </div>
       </div>
@@ -283,15 +287,6 @@
             {% csrf_token %}
                 <br>
                 <h4><label class = "col-lg-2" for="country">Country:</label><input class = "col-lg-3 col-5" type="text" placeholder="" name="country" id="country"></h4>
-                <h4><label class = "col-lg-2" for="persontype">I am a:</label>
-                    <select name="persontype" class = "col-lg-3 col-5" id="persontype" name="cars">
-                      <option value="Self Learner">Self Learner</option>
-                      <option value="Parent">Parent</option>
-                      <option value="Tutor">Tutor</option>
-                      <option value="Student">Student</option>
-                      <option value="Others">Others</option>
-                    </select>
-                </h4>
                 <h4><label class = "col-lg-2" for="email">Email:</label><input  class = "col-lg-3 col-5" type="email" placeholder="" name="email" id="email"></h4>
               <br>
                 <input type="submit" id = "interest" class="btn btn-xl btn-warning" value="I'm Interested">
@@ -302,16 +297,11 @@
           <p></p>
           <a id="survey1" class="btn btn-xl btn-dark">Survey for Parents</a>
           <p></p>
-          <a id="survey2" class="btn btn-xl btn-dark">Survey for Non-Parents</a>
           
           <script>
             var survey1 = document.getElementById("survey1");
             survey1.addEventListener('click', function() {
               window.location = "https://docs.google.com/forms/d/e/1FAIpQLSd3EV3gzyAPl3QMxvQXIJqWEW9OLjw6Q7fBENaObQGpT3FLAQ/viewform?usp=pp_url&entry.1140361277="+email.value;
-            }, false);
-            var survey2 = document.getElementById("survey2");
-            survey2.addEventListener('click', function() {
-              window.location = "https://docs.google.com/forms/d/e/1FAIpQLSeSYjnzuszN104usO8AnTjZP1ISHP15eZENCB0NePtNGyonRQ/viewform?usp=pp_url&entry.2134005558="+email.value;
             }, false);
         </script>
       </div>

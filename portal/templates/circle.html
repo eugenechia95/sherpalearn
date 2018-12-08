@@ -168,9 +168,10 @@
             </div>
             <div class="line"></div>
             
+            <img class ="clickhere" id="autogen" src="{% static 'images/clickhere.png' %}">
             <div class="container">
+            <button type="button" class="btn btn-warning togbut" data-toggle="modal" data-target="#exampleModal" id="autobut">Auto Generate</button>
             <button type="button" class="btn btn-warning togbut">Create Worksheet</button>
-            <button type="button" class="btn btn-warning togbut" data-toggle="modal" data-target="#exampleModal">Auto Generate</button>
             <button type="button" class="btn btn-secondary togbut">Select</button>
             <br>
             <br>
@@ -221,7 +222,9 @@
                                             </select>
                                         </div>
                                     </div>
-                                  <button id="generate" class="btn btn-warning" data-toggle="modal" data-target="#Modal2" data-dismiss="modal">Generate Worksheet</button>
+                                    <img class ="clickhere" src="{% static 'images/clickhere.png' %}">
+                                    <br>
+                                    <button id="generate" class="btn btn-warning" data-toggle="modal" data-target="#Modal2" data-dismiss="modal">Generate Worksheet</button>
                                 </form>
                             </div>
                         
@@ -251,9 +254,10 @@
                                           <input type="text" class="form-control" id="question" placeholder="Title">
                                         </div>
                                     </div>
+                                    <img id ="previewbutton" class ="clickhere" src="{% static 'images/clickhere.png' %}">
                                     <div class="row text-center">
                                         <div class="col-sm">
-                                            <button type="submit" class="col-sm btn btn-secondary" data-toggle="modal" data-target="#preview" data-dismiss="modal">Preview</button>
+                                            <button type="submit" class="col-sm btn btn-secondary" data-toggle="modal" data-target="#preview" data-dismiss="modal" id="previewbut">Preview</button>
                                         </div>
                                         <div class="col-sm">
                                             <button type="submit" class="col-sm btn btn-secondary">Manually Edit</button>
@@ -273,6 +277,7 @@
                                     </div>
                                     <input type="checkbox"> with Answers
                                     <input type="checkbox"> with Worked Solutions
+                                  <div class="row justify-content-center"><a id="generatingbutton" class ="invisible" data-dismiss="modal" aria-label="Close"><img class ="clickhere" src="{% static 'images/clickhere.png' %}"></a></div>
                                   <div class="row justify-content-center"><a id="generating" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Assign</a></div>
                                 </form>
                             </div>
@@ -320,6 +325,10 @@
                         
                       </div>
                       <div class="modal-footer">
+                          
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  data-toggle="modal" data-target="#Modal2" id = "closebut"><div><img class ="clickhere" src="{% static 'images/clickhere.png' %}"></div>
+                          <span aria-hidden="true">&times;</span>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -327,9 +336,12 @@
                 
                 <div>
                 <h5>MY WORKSHEETS</h5>
+                    <img class ="clickhere invisible row" id="final" src="{% static 'images/clickhere.png' %}">
                     <div class="card d-inline-block invisible" id = "reqwork" style="width: 8rem;">
                       <div class ="imgbord">
+                          <a href="{% url 'feedback' %}">
                           <img class="card-img-top" src="{% static 'images/Squarelogo.png' %}" alt="Card image cap">
+                          </a>   
                       </div>
                       <div class="card-body">
                         <p class="card-text">
@@ -362,6 +374,17 @@
             
             $("#generating").on('click', function () {
                 $("#reqwork").removeClass('invisible');
+                $("#final").removeClass('invisible');
+                $("#autogen").addClass('invisible');
+            });
+            
+            $("#autobut").on('click', function () {
+                $("#autogen").addClass('invisible');
+            });
+            
+            $("#closebut").on('click', function () {
+                $("#previewbutton").addClass('invisible');
+                $("#generatingbutton").removeClass('invisible');
             });
         });
     </script>
